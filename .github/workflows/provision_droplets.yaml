@@ -9,7 +9,7 @@ on:
         default: 'App Server'
         type: string
 jobs:
-  provision-ec2:
+  provision-droplets:
     runs-on: ubuntu-latest
     steps:
       - name: Install doctl
