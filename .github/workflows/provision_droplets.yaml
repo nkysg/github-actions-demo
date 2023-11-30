@@ -17,4 +17,4 @@ jobs:
         with:
           token: ${{ secrets.DROPLET_TOKEN }}
       - name: Provision Droplets
-        run: doctl compute droplet ysg-test create --image ubuntu-20-04-x64 --size s-1vcpu-1gb --region sfo3
+        run: doctl compute droplet create ysg-test --image ubuntu-20-04-x64 --size s-1vcpu-1gb --region sfo3
