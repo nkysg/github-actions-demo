@@ -1,0 +1,21 @@
+name: Provision Droplets
+
+on:
+  workflow_dispatch:
+    inputs:
+      ec2-name:
+        description: Droplets name
+        required: true
+        default: 'App Server'
+        type: string
+jobs:
+  provision-ec2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          droplet_token: '${{ secrets.DROPLET_TOKEN }}'
+      - name: Provision Droplets
+        run:  doctl compute droplet create --image ubuntu-20-04-x64 --size s-1vcpu-1gb --region sfo3 ysg_test
+     
