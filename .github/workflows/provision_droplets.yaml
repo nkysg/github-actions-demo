@@ -14,6 +14,4 @@ jobs:
     steps:
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
-      - name: Provision Droplets
-        run:  doctl compute droplet create ysg_test -t '${{ secrets.DROPLET_TOKEN }}' --image ubuntu-20-04-x64 --size s-1vcpu-1gb --region sfo3 ysg_test
      
