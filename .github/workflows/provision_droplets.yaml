@@ -17,6 +17,6 @@ jobs:
         with:
           token: ${{ secrets.DROPLET_TOKEN }}
       - name: Additional images
-        run: doctl compute image
+        run: doctl compute image list-user
       - name: Provision Droplets
         run: doctl compute droplet create ysg-test --image starcoin-ci --size s-8vcpu-16gb-amd --region sfo3 --wait
