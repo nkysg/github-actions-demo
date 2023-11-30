@@ -14,4 +14,6 @@ jobs:
     steps:
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DROPLET_TOKEN }}
      
