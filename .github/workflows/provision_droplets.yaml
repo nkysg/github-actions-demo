@@ -19,4 +19,4 @@ jobs:
       - name: Additional images
         run: doctl compute image list-user
       - name: Provision Droplets
-        run: doctl compute droplet create ysg-test --image starcoin-ci --size s-8vcpu-16gb-amd --region sfo3 --wait
+        run: doctl compute droplet create ysg-test --image starcoin-ci --type snapshot --size s-8vcpu-16gb-amd --region sfo3 --wait
